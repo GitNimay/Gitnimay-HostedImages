@@ -1,0 +1,17 @@
+---
+title: Roadmap to Get Started
+---
+flowchart LR
+classDef s1 fill:#E8F1FF,stroke:#3B82F6,stroke-width:2px,color:#0F172A
+classDef s2 fill:#EEFCE8,stroke:#22C55E,stroke-width:2px,color:#0F172A
+classDef s3 fill:#FFF7E6,stroke:#F59E0B,stroke-width:2px,color:#0F172A
+classDef s4 fill:#FFF1F2,stroke:#E11D48,stroke-width:2px,color:#0F172A
+classDef note fill:#F8FAFC,stroke:#64748B,stroke-width:1.5px,color:#0F172A
+
+S1["1. DevOps foundation<br>Git, CI/CD, tests, IaC, basic observability"]:::s1 --> S2["2. Reliability maturity<br>dashboards, cleaner alerts, runbooks, ownership"]:::s2 --> G{"Running ML in production?"}:::note
+G -->|"Yes"| S3["3. Add MLOps<br>data/versioning, training pipelines, registry, drift checks"]:::s3
+G -->|"No"| S4["3. Stay on strong DevOps<br>keep shipping, improve reliability"]:::s4
+S3 --> H{"Ops too noisy / complex?"}:::note
+S4 --> H
+H -->|"Yes"| S5["4. Add AIOps<br>correlation, anomaly detection, RCA support, remediation"]:::s4
+H -->|"No"| S6["4. Keep maturing observability and operations"]:::note

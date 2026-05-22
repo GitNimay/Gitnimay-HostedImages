@@ -1,0 +1,20 @@
+---
+title: DevOps vs MLOps vs AIOps
+---
+flowchart TB
+classDef dev fill:#E8F1FF,stroke:#3B82F6,stroke-width:2px,color:#0F172A
+classDef ml fill:#EEFCE8,stroke:#22C55E,stroke-width:2px,color:#0F172A
+classDef ai fill:#FFF4E8,stroke:#F97316,stroke-width:2px,color:#0F172A
+classDef neutral fill:#F8FAFC,stroke:#64748B,stroke-width:1.5px,color:#0F172A
+
+Q["Three operating models"]:::neutral --> D["DevOps<br><b>Goal:</b> ship software fast + safely<br><b>Primary asset:</b> application code<br><b>Main users:</b> dev + platform teams"]:::dev
+Q --> M["MLOps<br><b>Goal:</b> run ML lifecycle reliably<br><b>Primary asset:</b> models + data + pipelines<br><b>Main users:</b> data/ML + platform teams"]:::ml
+Q --> A["AIOps<br><b>Goal:</b> reduce operational noise with AI<br><b>Primary asset:</b> telemetry + incidents<br><b>Main users:</b> SRE + ops + IT teams"]:::ai
+
+D --> D1["Build • Test • Deploy • Observe"]:::dev
+M --> M1["Train • Validate • Register • Deploy • Monitor • Retrain"]:::ml
+A --> A1["Ingest • Correlate • Detect • Predict • Remediate"]:::ai
+
+D1 --> Base["Foundation for software delivery"]:::neutral
+M1 --> Ext["Extends DevOps when ML is in prod"]:::neutral
+A1 --> Ops["Adds intelligence when ops becomes noisy + complex"]:::neutral
