@@ -1,3 +1,3 @@
 # GIF notes
 
-Generated locally with Pillow as a no-text abstract animated CI/review loop: moving tokens through nodes with soft verification arcs. No external GIF source used because Tenor credentials were not configured in this Hermes profile.
+Replacement GIF after user feedback. Generated locally with Pillow as a premium no-text abstract orchestration flow: soft misty background, flowing lines, subtle particles, and gentle convergence pulses. It avoids literal boxes, dashboards, cartoon styling, UI, code, labels, letters, numbers, and logos.
